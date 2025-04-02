@@ -2,6 +2,10 @@ from datetime import datetime
 import os
 from flask import Flask, request, jsonify, render_template
 
+# Disable ANSI colors in output
+os.environ['FLASK_NO_COLOR'] = '1'
+os.environ['PYTHONUNBUFFERED'] = '1'
+
 app = Flask(__name__)
 
 @app.route('/')

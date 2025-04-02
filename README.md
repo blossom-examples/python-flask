@@ -64,6 +64,8 @@ Visit `http://localhost:3000` (or your configured port) in your browser to see t
 
 - `PORT`: The port number to run the server on (default: 5000)
 - `FLASK_DEBUG`: Enable debug mode when set to 1 (default: 0)
+- `FLASK_NO_COLOR`: Disable ANSI color codes in logs when set to 1 (default: 1)
+- `PYTHONUNBUFFERED`: Disable Python output buffering when set to 1 (default: 1)
 
 ## Demo Features
 
