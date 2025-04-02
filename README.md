@@ -44,7 +44,7 @@ A ready-to-deploy Python Flask app to get you started quickly on [Blossom](https
 
 ### Development Mode (with auto-reload)
 ```bash
-flask run --debug
+FLASK_DEBUG=1 flask run
 ```
 
 ### Production Mode
@@ -52,9 +52,18 @@ flask run --debug
 flask run
 ```
 
-The server will start on port 5000 by default. You can change this by setting the `FLASK_RUN_PORT` environment variable.
+The server will start on port 5000 by default. You can change this by setting the `PORT` environment variable:
 
-Visit `http://localhost:5000` in your browser to see the demo application.
+```bash
+PORT=3000 flask run
+```
+
+Visit `http://localhost:3000` (or your configured port) in your browser to see the demo application.
+
+## Environment Variables
+
+- `PORT`: The port number to run the server on (default: 5000)
+- `FLASK_DEBUG`: Enable debug mode when set to 1 (default: 0)
 
 ## Demo Features
 
@@ -95,9 +104,9 @@ You can test the API endpoints using curl:
 
 ```bash
 # Test the hello endpoint
-curl http://localhost:5000/api/hello
-curl http://localhost:5000/api/hello?name=John
+curl http://localhost:3000/api/hello
+curl http://localhost:3000/api/hello?name=John
 
 # Test the echo endpoint
-curl -X POST -H "Content-Type: application/json" -d '{"message":"Hello World"}' http://localhost:5000/api/echo
+curl -X POST -H "Content-Type: application/json" -d '{"message":"Hello World"}' http://localhost:3000/api/echo
 ```
