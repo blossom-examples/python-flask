@@ -44,25 +44,27 @@ A ready-to-deploy Python Flask app to get you started quickly on [Blossom](https
 
 ### Development Mode (with auto-reload)
 ```bash
-FLASK_DEBUG=1 flask run
+FLASK_DEBUG=1 python app.py
 ```
 
 ### Production Mode
 ```bash
-flask run
+python app.py
 ```
 
 The server will start on port 5000 by default. You can change this by setting the `PORT` environment variable:
 
 ```bash
-PORT=3000 flask run
+PORT=3000 python app.py
 ```
 
-Visit `http://localhost:3000` (or your configured port) in your browser to see the demo application.
+The application will listen on all interfaces (0.0.0.0) and be accessible at:
+- http://localhost:3000 (or your configured port)
+- http://<your-ip>:3000 (for external access)
 
 ## Environment Variables
 
-- `PORT`: The port number to run the server on (default: 5000)
+- `PORT`: The port number to run the server on (default: 5000). The application will listen on all interfaces (0.0.0.0).
 - `FLASK_DEBUG`: Enable debug mode when set to 1 (default: 0)
 - `FLASK_NO_COLOR`: Disable ANSI color codes in logs when set to 1 (default: 1)
 - `PYTHONUNBUFFERED`: Disable Python output buffering when set to 1 (default: 1)

@@ -6,6 +6,11 @@ from flask import Flask, request, jsonify, render_template
 os.environ['FLASK_NO_COLOR'] = '1'
 os.environ['PYTHONUNBUFFERED'] = '1'
 
+# Set Flask's own env vars
+if 'PORT' in os.environ:
+    os.environ['FLASK_RUN_PORT'] = os.environ['PORT']
+os.environ['FLASK_RUN_HOST'] = '0.0.0.0'
+
 app = Flask(__name__)
 
 @app.route('/')
