@@ -32,6 +32,8 @@ A ready-to-deploy Python Flask app to get you started quickly on [Blossom](https
    .\venv\Scripts\activate
    # On macOS/Linux
    source venv/bin/activate
+   # Fish shell
+   source venv/bin/activate.fish
    ```
 5. Install dependencies:
    ```bash
