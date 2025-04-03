@@ -8,6 +8,7 @@ A ready-to-deploy Python Flask app to get you started quickly on [Blossom](https
 # Create and activate virtual environment
 python -m venv venv
 source venv/bin/activate  # or `venv/Scripts/activate` on Windows
+source venv/bin/activate.fish  # fish shell
 
 # Install dependencies
 pip install -r requirements.txt

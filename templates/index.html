@@ -83,7 +83,8 @@
     }
 
     async function sendEcho() {
-      const message = document.getElementById('echoInput').value;
+      const messageInput = document.getElementById('echoInput');
+      const message = messageInput.value || messageInput.placeholder;
 
       try {
         const response = await fetch('/api/echo', {
